@@ -8,7 +8,7 @@ composer install
 #### Copy .env file
 
 ```
-cp .env.example .env
+copy .env.example .env
 ```
 
 #### Set Database Detail
