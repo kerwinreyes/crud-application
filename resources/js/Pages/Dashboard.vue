@@ -2,6 +2,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import DangerButton from '@/components/DangerButton.vue';
 import SecondaryButton from '@/components/SecondaryButton.vue';
+import PrimaryButton from '@/components/PrimaryButton.vue';
 import { Head, Link, useForm, usePage } from '@inertiajs/vue3';
 import { ref, computed } from 'vue';
 import Modal from '@/components/Modal.vue';
@@ -48,12 +49,12 @@ const closeModal = () => {
             <div class="flex items-center justify-between mb-6">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">Users</h2>
                 <div>
-                    <Link
+                    <PrimaryButton
                         class="px-6 py-2 mr-5 text-white bg-green-500 rounded-md hover:bg-green-700 focus:outline-none"
                         :href="route('users.create')"
                     >
                         Create User
-                    </Link>
+                    </PrimaryButton>
                     <DangerButton 
                         :class="{ 'cursor-not-allowed bg-grey-500': selectedIDs.length === 0 }"
                         :href="selectedIDs.length === 0 ? null : route('users.create')"

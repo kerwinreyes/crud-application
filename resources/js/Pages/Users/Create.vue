@@ -10,7 +10,7 @@ const form = useForm({
     last_name: '',
     username: '',
     password: '',
-    confirm_password: '',
+    password_confirmation: '',
     email: '',
     address: '',
     postcode: '',
@@ -118,22 +118,22 @@ const submit = () => {
                                             v-model="form.password"
                                             autofocus
                                             required />
-                                        <span class="text-red-600" v-if="form.errors.password">
+                                        <span class="text-red-600 w-20" v-if="form.errors.password">
                                             {{ form.errors.password }}
                                         </span>
                                     </div>
                                     <div class="mb-4">
-                                        <InputLabel for="confirm_password" value="Confirm Password" />
+                                        <InputLabel for="password_confirmation" value="Confirm Password" />
 
                                         <TextInput
-                                            id="confirm_password" 
+                                            id="password_confirmation" 
                                             type="password" 
                                             class="mt-1 block w-full" 
-                                            v-model="form.confirm_password"
+                                            v-model="form.password_confirmation"
                                             autofocus
                                             required />
-                                        <span class="text-red-600" v-if="form.errors.confirm_password">
-                                            {{ form.errors.confirm_password }}
+                                        <span class="text-red-600" v-if="form.errors.password_confirmation">
+                                            {{ form.errors.password_confirmation }}
                                         </span>
                                     </div>
                                     </div>
