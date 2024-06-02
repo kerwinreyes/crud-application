@@ -49,12 +49,12 @@ const closeModal = () => {
             <div class="flex items-center justify-between mb-6">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">Users</h2>
                 <div>
-                    <PrimaryButton
-                        class="px-6 py-2 mr-5 text-white bg-green-500 rounded-md hover:bg-green-700 focus:outline-none"
+                    <Link
+                        class="inline-flex items-center px-4 py-2 mr-2 bg-green-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
                         :href="route('users.create')"
                     >
                         Create User
-                    </PrimaryButton>
+                    </Link>
                     <DangerButton 
                         :class="{ 'cursor-not-allowed bg-grey-500': selectedIDs.length === 0 }"
                         :href="selectedIDs.length === 0 ? null : route('users.create')"
