@@ -13,6 +13,10 @@ cp .env.example .env
 
 #### Set Database Detail
 
+```
+php artisan migrate
+```
+
 #### Install NPM Dependencies
 
 ```
@@ -27,4 +31,9 @@ php artisan serve
 
 ```
 npm run dev
+```
+#### Test Laravel Project
+
+```
+php artisan test
 ```
